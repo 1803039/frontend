@@ -7,6 +7,8 @@ function App() {
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
 
+    const environment = process.env.REACT_APP_ENV || "Unknown";
+
     const handleLogin = async () => {
         try {
             const response = await axios.post('http://172.16.2.192:3000/login', {
@@ -21,7 +23,7 @@ function App() {
 
     return (
         <div>
-            <h1>Login</h1>
+            <h1>Login in {environment}</h1>
             <input
                 type="text"
                 placeholder="Username"
