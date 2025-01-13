@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  frontend:
+    build:
+      context: .
+      args:
+        REACT_APP_ENV: dev  # Change this for stage or prod
+    ports:
+      - "3000:3000"
