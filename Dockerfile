@@ -10,6 +10,9 @@ RUN npm install
 
 # Copy the app and build
 COPY . .
+# Ensure the .env file is included (copied from the correct branch)
+COPY .env .env
+
 RUN npm run build
 
 # Use nginx to serve the built files
@@ -21,4 +24,3 @@ EXPOSE 80
 
 # Default command
 CMD ["nginx", "-g", "daemon off;"]
-
