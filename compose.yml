@@ -6,7 +6,7 @@ services:
       args:
         REACT_APP_ENV: dev
     ports:
-      - "3003:3000"
+      - "3003:80"
 
 volumes:
   db_data:
