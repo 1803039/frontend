@@ -2,26 +2,11 @@ version: "3.8"
 services:
   frontend:
     build:
-      context: ./frontend
+      context: .
       args:
         REACT_APP_ENV: prod
     ports:
-      - "3003:3000"
-
-  backend:
-    build: ./backend
-    ports:
-      - "4400:5000"
-    environment:
-      - MONGO_URI=mongodb://db:27017/db_prod
-
-  db:
-    image: mongo
-    container_name: mongo_prod
-    ports:
-      - "27019:27017"
-    volumes:
-      - db_data:/data/db
+      - "3005:80"
 
 volumes:
   db_data:
