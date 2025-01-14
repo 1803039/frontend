@@ -10,6 +10,7 @@ RUN npm install
 
 # Copy the app and build
 COPY . .
+COPY .env .env
 RUN npm run build
 
 # Use nginx to serve the built files
