@@ -5,6 +5,7 @@ services:
       context: .
       args:
         REACT_APP_ENV: dev
+    container_name: dev_front
     ports:
       - "3003:80"
 
