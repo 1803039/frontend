@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build and Deploy frontend
 
 on:
   push:
@@ -9,11 +9,16 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, X64]
 
     steps:
       - uses: actions/checkout@v3
+      
+      - uses: docker/setup-buildx-action@v2    
 
-      - name: Build Docker image
+      - name: Local server Deployment
         run: |
-          docker compose -f compose.yml up --build -d
+          cd /home/sadman-sajid/firstapp/frontend  # local project directory
+          git fetch --all
+          git checkout ${{ github.ref_name }}
+          docker compose up -d --build
