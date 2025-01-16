@@ -6,8 +6,12 @@ services:
       args:
         REACT_APP_ENV: dev
     container_name: dev_front
+    environment:
+      - BACK_END_URL=http://backend:3000
     ports:
       - "3003:80"
+    networks:
+      - dev_net
 
 volumes:
   db_data:
