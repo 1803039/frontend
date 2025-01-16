@@ -11,3 +11,7 @@ services:
 
 volumes:
   db_data:
+
+networks:
+  dev_net: # Define a network
+    external: true
