@@ -6,6 +6,8 @@ services:
       args:
         REACT_APP_ENV: stage
     container_name: stage_front
+    environment:
+      - REACT_APP_BACKEND_URL=http://172.16.2.192:5500
     ports:
       - "3004:80"
 
