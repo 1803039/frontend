@@ -1,4 +1,4 @@
-name: Build and Deploy Stage front
+name: Deploy Stage front
 
 on:
   push:
