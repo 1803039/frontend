@@ -7,15 +7,9 @@ services:
         REACT_APP_ENV: dev
     container_name: dev_front
     environment:
-      - BACK_END_URL=http://172.16.2.192:4400/login
+      - REACT_APP_BACKEND_URL=http://172.16.2.192:4400
     ports:
       - "3003:80"
-    networks:
-      - dev_net
 
 volumes:
   db_data:
-
-networks:
-  dev_net: # Define a network
-    external: true
