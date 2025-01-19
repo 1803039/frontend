@@ -1,4 +1,4 @@
-name: Build and Deploy Stage front
+name: Build and Deploy Stage frontend
 
 on:
   push:
