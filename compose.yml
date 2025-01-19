@@ -5,6 +5,9 @@ services:
       context: .
       args:
         REACT_APP_ENV: prod
+    container_name: prod_front
+    environment:
+      - REACT_APP_BACKEND_URL=http://172.16.2.192:6600
     ports:
       - "3005:80"
 
