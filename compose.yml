@@ -1,15 +1,15 @@
 version: "3.8"
 services:
-  frontend-stage:
+  frontend-dev:
     build:
       context: .
       args:
-        REACT_APP_ENV: stage
-    container_name: stage_front
+        REACT_APP_ENV: dev
+    container_name: dev_front
     environment:
-      - REACT_APP_BACKEND_URL=http://172.16.2.192:5500
+      - REACT_APP_BACKEND_URL=http://172.16.2.192:4400
     ports:
-      - "3004:80"
+      - "3003:80"
 
 volumes:
   db_data:
