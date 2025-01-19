@@ -11,7 +11,7 @@ function App() {
 
     const handleLogin = async () => {
         try {
-            const backendUrl = process.env.BACK_END_URL;
+            const backendUrl = process.env.REACT_APP_BACKEND_URL;
             const response = await axios.post(`${backendUrl}/login`, {
                 username,
                 password
