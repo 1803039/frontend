@@ -1,4 +1,4 @@
-name: Deploy Dev front
+name: Deploy Dev frontend
 
 on:
   push:
